@@ -1,0 +1,130 @@
+/* basic reset  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f4f8;
+    font-family: arial,sans-serif;
+}
+
+.calculator {
+    background: linear-gradient(145deg, #cacfd9 , #ffffff);
+    padding: 20px;
+    border-radius: 20px;
+    width: 320px;
+    box-shadow: 20px -20px 50px #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#display {
+    width: 100%;
+    padding: 15px;
+    font-size: 28px;
+    text-align: right;
+    border: none;
+    margin-bottom: 10px;
+    background: #e0e5ec;
+    color: #333;
+    box-shadow: inset 4px 4px 8px #c1c6ce, inset -4px -4px 8px #ffffff;
+    transition: background-color 0.3s ease;
+    height: 50px;
+    animation: pulse 0.2s ease-in-out;
+}
+ 
+
+@keyframes pulse {
+    0% {
+        background-color: #222;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: #222;
+    }
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px;
+    font-size: 18px;
+    background: linear-gradient(145deg, #ffffff,#d3d8e0);
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 6px 6px 12px #babecc , -6px -6px 12px #ffffff;
+}
+
+.btn:hover {
+    background: linear-gradient(145deg, #d3d8e0,#ffffff);
+    transform: translate(-2px);
+}
+
+.btn:active {
+    transform: scale(0.95);
+    box-shadow: inset 4px 4px 8px #babecc, inset -4px -4px 8px #ffffff;
+}
+
+.operator {
+    background: linear-gradient(145deg,#e59400,#ffb84d,#e59400);
+    color: white;
+}
+
+.operator:hover {
+    background: linear-gradient(145deg,#e59400,#ffb84d);
+}
+
+.operator:active {
+    box-shadow: inset 4px 4px 8px #d77e00, inset -4px -4px 8px #ffcc66;
+}
+
+.equal {
+    grid-column: span 4;
+    background: linear-gradient(145deg, #28a745,#218838);
+    color: white;
+}
+
+.equal:hover {
+    background: linear-gradient(145deg,#218838,#28a745);
+}
+
+.equal:active {
+    box-shadow: inset 4px 4px 8px #1d6c31, inset -4px -4px 8px #32bf54;
+}
+
+.clear {
+    background: linear-gradient(145deg,#dc3545,#c82333);
+    color: white;
+}
+
+
+.clear:hover {
+    background: linear-gradient(145deg,#c82333,#dc3545);
+}
+
+.clear:active {
+    box-shadow: inset 4px 4px 8px #b31d28, inset -4px -4px 8px #e65c6b;
+    
+}
+
+
+
+
+
